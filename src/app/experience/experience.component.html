@@ -1,0 +1,31 @@
+<app-header></app-header>
+<div class="row">
+  <div class="col-md-10">
+    <a (click)="onSelectAddExp()"><button class="btn btn-default">Add Experience </button></a>
+  </div>
+</div>
+<br>
+<div class="row">
+  <div class="col-md-10">
+    <a class="list-group-item clearfix"
+    *ngFor="let exp of experience">
+      <h4 class="list-group-item-heading">Name of Company:</h4>
+      <a class="list-group-item"><b>{{exp.companyName}}</b></a>
+      <br>
+      <h4 class="list-group-item-heading">Title:</h4>
+      <a class="list-group-item"><b>{{exp.title}}</b></a>
+      <br>
+      <h4 class="list-group-item-heading">Start Date: {{exp.startDate.slice(0,10)}}<br><br> End Date: {{exp.endDate.slice(0,10)}}</h4>
+      <br>
+      <h4 class="list-group-item-heading">Location:</h4>
+      <a class="list-group-item"><b>{{exp.houseNum}}, {{exp.street}}, {{exp.city}}, {{exp.country}}.</b></a>
+      <br>
+      <h4 class="list-group-item-heading">Years of Experience: {{exp.yearsOfExp}}</h4>
+      <br><br>
+
+      <button class="btn btn-default" type="button" (click)="onSelectEditExp(exp.id)" >Edit </button>
+
+      <button class="btn btn-danger" type="button" (click)="onSelectDeleteExp(exp.id)"> Remove</button>
+    </a>
+  </div>
+</div>

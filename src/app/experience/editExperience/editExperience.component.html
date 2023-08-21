@@ -1,0 +1,38 @@
+<app-header></app-header>
+<div class="row">
+    <div style=" padding-top: 80px; padding-left: 600px" class="col-md-10 col-md-7">
+        <h2><b>Experience</b></h2>
+        <form [formGroup]="editExpForm" (ngSubmit)="onSubmit(id, locationId)" >
+            <br>
+            <div class="form-group">
+                <label for="title">Title</label>
+              <input class="form-control" id="title" type="text" formControlName="title" >
+            </div>
+            <div class="form-group">
+                <label for="companyName">Company Name</label>
+                <input class="form-control" id="companyName" type="text" formControlName="companyName" >
+            </div>
+            <div class="form-group">
+                <label for="yearsOfExp">Years of Experience</label>
+                <input  class="form-control" id="yearsOfExp" type="text" formControlName="yearsOfExp" >
+            </div><br>
+            <div class="form-group">
+                <label for="startDate">Start Date</label>
+                <br>
+                <input  class="form-inline" id="startDate" type="text" formControlName="startDate" >
+            </div>
+            <div class="form-inline">
+                <label for="endDate">End Date</label>
+                <br><input  class="form-inline" id="endDate" type="text" formControlName="endDate" >
+            </div>
+            <div class="form-group">
+                <label for="houseNum">Location</label>
+                <br><input class="form-control" id="houseNum" type="text" formControlName="houseNum" >
+                <br><input  class="form-control" id="street" type="text" formControlName="street" >
+                <br><input  class="form-control" id="city" type="text" formControlName="city" >
+                <br><input  class="form-control" id="country" type="text" formControlName="country" >
+            </div>
+            <button type="submit">Save Changes</button>
+        </form>
+    </div>
+</div>

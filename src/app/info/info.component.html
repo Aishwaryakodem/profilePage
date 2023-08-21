@@ -1,0 +1,19 @@
+<app-header></app-header>
+<div class="row">
+  <div class="col-xs-10">
+    <h3>Profile Info</h3>
+    <a class="list-group-item clearfix"
+    *ngFor="let userInfo of info">
+      <h4 class="list-group-item-heading">Name:</h4>
+      <a class="list-group-item"><b>{{userInfo.firstName}} {{userInfo.lastName}}</b></a>
+      <br>
+      <h4 class="list-group-item-heading">Email:</h4>
+      <a class="list-group-item"><b>{{userInfo.email}}</b></a>
+      <br>
+      <h4 class="list-group-item-heading">Phone Number:  </h4>
+      <a class="list-group-item"><b>{{userInfo.phone}}</b></a>
+      <br><br>
+      <button class="btn btn-default" type="button" (click)="onSelectEdit()" >Edit </button>
+    </a>
+  </div>
+</div>

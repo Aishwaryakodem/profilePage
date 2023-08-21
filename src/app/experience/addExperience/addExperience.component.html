@@ -1,0 +1,43 @@
+<app-header></app-header>
+
+<div class="row">
+    <div style=" padding-top: 80px; padding-left: 600px" class="col-md-10 col-md-7">
+        <h2><b>Experience</b></h2>
+        <form [formGroup]="educationForm" (ngSubmit)="onSubmit()" >
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input type="title" class="form-control" id="title" placeholder="Enter Job Title" formControlName="title">
+            </div>
+
+            <div class="form-group">
+                <label for="companyName">Company Name</label>
+                <input type="companyName" class="form-control" id="companyName" placeholder="Enter Company Name" formControlName="companyName">
+            </div>
+            <div class="form-group">
+                <label for="yoe">Years of Experience</label>
+                <input type="yoe" class="form-control" id="yoe" placeholder="Enter Years of Experience" formControlName="yearsOfExp">
+            </div>
+            <div class="form-group">
+                <label for="startDate">Start Date</label>
+                <br>
+                <input type="startDate" class="form-inline" id="startDate" placeholder="YYYY-MM-DD" formControlName="startDate">
+            </div>
+            <div class="form-inline">
+                <label for="endDate">End Date</label>
+                <br><input type="endDate" class="form-inline" id="endDate" placeholder="YYYY-MM-DD" formControlName="endDate">
+            </div>
+<!--            <div class="checkbox">-->
+<!--                <label><input type="checkbox">Current Employee</label>-->
+<!--            </div>-->
+            <br>
+            <div class="form-group">
+                <label for="houseNum">Location</label>
+                <br><input type="houseNum" class="form-control" id="houseNum" placeholder="House Number" formControlName="houseNum">
+                <br><input type="street" class="form-control" id="street" placeholder="Street" formControlName="street">
+                <br><input type="city" class="form-control" id="city" placeholder="City" formControlName="city">
+                <br><input type="country" class="form-control" id="country" placeholder="Country" formControlName="country">
+            </div>
+            <button class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>

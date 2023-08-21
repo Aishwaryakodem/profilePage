@@ -1,0 +1,38 @@
+<app-header></app-header>
+<div class="row" *ngIf="isLoading">
+  <div style=" padding-top: 80px; padding-left: 600px" class="col-md-10 col-md-7">
+    <h2><b>Education</b></h2>
+    <form [formGroup]="editEducationForm" (ngSubmit)="onSubmit(educationId)">
+      <br>
+      <div class="form-group">
+        <label for="name">Name of School</label>
+        <input class="form-control" id="name" type="text"  formControlName="name">
+      </div>
+      <div class="form-group">
+        <label for="startDate">Start Date</label>
+      <br>
+      <input class="form-inline" id="startDate" type="text"  formControlName="startDate">
+      </div>
+      <div class="form-inline">
+        <label for="endDate">End Date</label>
+        <br><input class="form-inline" id="endDate" type="text"  formControlName="endDate">
+      </div><br>
+
+    <label for="degreeName">Degree Level</label>
+      <br>
+    <select class="btn btn-default dropdown" id="degreeName" formControlName="degreeName" >
+      <ng-container *ngFor="let d of degree" >
+     <option>{{d.name}}</option>
+      </ng-container>
+    </select>
+    <br>
+
+      <br><br>
+      <div class="form-group">
+        <label for="grade">Grade</label>
+        <input  class="form-control" id="grade" type="text"  formControlName="grade">
+      </div>
+      <button type="submit">Save Changes</button>
+    </form>
+  </div>
+</div>

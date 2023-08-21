@@ -1,0 +1,31 @@
+<app-header></app-header>
+<div class="row">
+  <div class="col-md-10">
+    <br>
+    <br>
+    <label style="font-family: 'Noto Sans CanAborig Lt'; font-size: 20px">
+      Select to Add Skill
+    </label>
+    <br><br>
+      <select class="btn btn-default dropdown" style=" border:none; padding: 20px 50px; border-radius:10px" id="multiple-select" multiple>
+      <option *ngFor="let skill of skills" (click)="onSelect(skill)">{{skill.name}} </option>
+    </select>
+
+  </div>
+</div>
+
+<br>
+<br>
+<div class="row">
+  <div class="col-md-10">
+      <h4 style="font-family: Arial; font-size: 30px" class="list-group-item-heading"><b>Skills:</b> </h4>
+    <br>
+      <div class="list-group-item clearfix" *ngFor="let s of userSkills">
+        <a style="font-family: Arial; font-size: 17px" class="list-group-item" ><b>{{s.num}}. {{s.skillName}}</b>
+        <div style="text-align: right"><button class="btn btn-danger" type="button" (click)="onSelectDeleteSkill(s.id)"> Remove</button>
+        </div>
+        </a><br>
+      <br>
+    </div>
+  </div>
+

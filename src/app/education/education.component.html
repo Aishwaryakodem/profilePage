@@ -1,0 +1,29 @@
+<app-header></app-header>
+<div class="row">
+  <div class="col-md-11">
+      <a (click)="onSelectAddEdu()"> <button class="btn btn-default">Add Education</button></a>
+  </div>
+</div>
+<br>
+<div class="row">
+  <div class="col-md-10">
+    <a class="list-group-item clearfix"
+       *ngFor="let edu of education">
+        <br>
+        <h4 class="list-group-item-heading">Name of Institute:</h4>
+        <a class="list-group-item"><b>{{edu.name}}</b></a>
+        <br>
+        <h4 class="list-group-item-heading">Degree Level:</h4>
+        <a class="list-group-item"><b>{{edu.degree}}</b></a>
+        <br>
+      <h4 class="list-group-item-heading">Start Date: {{edu.startDate.slice(0,10)}}</h4>
+      <br>
+      <h4 class="list-group-item-heading">End Date:  {{edu.endDate.slice(0,10)}}</h4>
+        <br>
+        <h4 class="list-group-item-heading">Grade: {{edu.grade}}</h4>
+    <button class="btn btn-default" type="button" (click)="onSelectEditEdu(edu.educationId)" >Edit </button>
+    <button class="btn btn-danger" type="button"  (click)="onSelectDeleteEdu(edu.educationId)"> Remove</button>
+      <br><br>
+    </a>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+<app-header></app-header>
+<div class="row">
+    <div style=" padding-top: 80px; padding-left: 600px" class="col-md-10 col-md-7">
+        <h2><b>Profile Info</b></h2>
+        <form (ngSubmit)="onSubmit(f.form.value, info.email, info.password)" #f="ngForm">
+            <br>
+            <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="firstName" class="form-control" id="firstName" type="text" name="firstName" [(ngModel)]="info.firstName">
+            </div>
+            <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="lastName" class="form-control" id="lastName" type="text" name="lastName" [(ngModel)]="info.lastName">
+            </div>
+            <div class="form-group">
+                <label for="phoneNum">Phone Number</label>
+                <input type="phoneNum" class="form-control" id="phoneNum" type="text" name="phoneNum" [(ngModel)]="info.phone">
+            </div>
+            <button type="submit">Save Changes</button>
+        </form>
+    </div>
+</div>
